@@ -2,8 +2,24 @@
 
 # آزمایش چهارم آزمایشگاه مهندسی نرم‌افزار (Object Oriented Design Patterns)
 ## مقدمات آزمایش
-
+در این آزمایش قصد داریم تا با دو عدد از الگوهای طراحی GoF یعنی الگو‌های State و Strategy آشنا شویم. برای این منظور یک سیستم اعلام وضعیت بسته‌های پستی ساده را طراحی می‌کنیم که توضیحات آن در دستور آزمایش وجود دارد.
 ## شرح آزمایش
+در ابتدا طبق خواسته سوال به صورت TDD عمل می کنیم و ابتدا تست ها را می نویسیم. بدین منظور ۲ تست به صورت زیر می‌نویسیم و همانطور که انتظار داریم تست‌ها پاس نخواهند شد.
+![image](https://github.com/kianomoomi/SELab4/assets/59165380/d5e479e6-09c3-4f19-8c21-79bacecafa83)
+حال باید کلاس‌های مربوطه را ایجاد کنیم. ابتدا می‌خواهیم الگوی Strategy را محقق کنیم. بنابراین یک اینترفیس ShippingStrategy می‌سازیم و کلاس‌های StandardShipping و ExpressShiping آن را implement می‌کنند.
+![image](https://github.com/kianomoomi/SELab4/assets/59165380/b3c418a7-ce56-486d-891f-959baf3b8ffe)
+![image](https://github.com/kianomoomi/SELab4/assets/59165380/3d593309-66b2-4205-b1bc-39ac29b8d04e)
+![image](https://github.com/kianomoomi/SELab4/assets/59165380/868dcf8d-9ef7-44fe-9853-14034dbb263f)
+
+حال می‌خواهیم الگوی State را برقرار کنیم. در اینجا وضعیت بسته همان State می‌باشد. الگوی State کمک می‌کند تا تا یک شی وقتی که استیت داخلیش تغییر می‌کند، رفتار خود را تغییر دهد. بنابراین برای محقق‌سازی این الگو یک اینترفیس State می‌سازیم و کلاس‌های InTransitState و DeliveredState آن‌ را implement می‌کنند.
+![image](https://github.com/kianomoomi/SELab4/assets/59165380/16b6f651-10d0-4d8b-ae27-b8f6e4576bf2)
+![image](https://github.com/kianomoomi/SELab4/assets/59165380/19d2be80-ddf3-40d2-be55-4b2cb3d9cb2d)
+![image](https://github.com/kianomoomi/SELab4/assets/59165380/caa33e4e-2e36-4d16-a347-168a902a2573)
+حال به پیاده‌سازی کلاس Product که همان بسته ما می‌باشد می‌پردازیم و از این الگو‌ها استفاده می‌کنیم.
+![image](https://github.com/kianomoomi/SELab4/assets/59165380/5b237e36-84ef-4549-b92f-4f535205c6e3)
+و در نهایت کلاس Main را با توجه به این الگو‌ها پیاده‌سازی می‌کنیم که می‌توانید کد آن را در مخزن مشاهده کنید.
+در نهایت پس از پیاده‌سازی کامل برنامه مشاهده خواهیم کرد که تست‌هایی که در ابتدا پاس نشده بودند، اکنون پاس می‌شوند!
+![image](https://github.com/kianomoomi/SELab4/assets/59165380/11821c2f-eb8b-4155-b55c-f93644abd565)
 
 ## پرسش‌ها
 
